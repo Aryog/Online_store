@@ -4,6 +4,7 @@ import ProductCard from './ProductCard'
 import { useState, useEffect } from 'react'
 import { ProductItems } from '@/components/@types/Products/Products'
 import axios from 'axios'
+import AnimatePulse from '@/components/UI/AnimatePulse'
 const Products = () => {
     // get api calls here
     const [products, setProducts] = useState<ProductItems[]>([]);
@@ -21,12 +22,14 @@ const Products = () => {
     }, [])
     return (
         <div className='w-5/6 m-auto mt-8 h-full'>
-            {
-                products.length > 0
-                    ? <div className='m-2 flex flex-wrap gap-4 justify-evenly'>{products.map((product) => <ProductCard productData={product} key={product.id} />)}</div>
-                    : <div>Loading...</div>
-            }
-
+            <div className='m-2 flex flex-wrap gap-4 justify-evenly'>
+                {
+                    products.length > 0
+                        ? products.map((product) => <ProductCard productData={product} key={product.id} />)
+                        : (Array.from({ length: 12 }, (_, index) => <AnimatePulse />))
+                }
+                {/* <AnimatePulse /> */}
+            </div>
         </div>
     )
 }

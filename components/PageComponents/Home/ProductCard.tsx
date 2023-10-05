@@ -2,13 +2,18 @@
 import React from 'react'
 import Rate from '../../UI/Rate'
 import { ProductItems } from '@/components/@types/Products/Products'
+import { useRouter } from 'next/navigation'
 type ProductCardProps = {
     productData: ProductItems;
 }
 const ProductCard = ({ productData }: ProductCardProps) => {
+    const router = useRouter();
+    function handleProduct(id: number) {
+        router.push(`/product/${id}`, { scroll: false })
+    }
     return (
         <>
-            <div className='drop-shadow-md hover:drop-shadow-lg gap-2 flex flex-col w-60 cursor-pointer bg-slate-50 mt-10'>
+            <div className='drop-shadow-md hover:drop-shadow-lg gap-2 flex flex-col w-60 cursor-pointer bg-slate-50 mt-10' onClick={() => handleProduct(productData.id)}>
                 {/* Image */}
                 <div className='h-60 w-60 transition-transform transform hover:scale-110 hover:p-0'>
                     <img src={productData.image} className='h-full w-full object-contain' />
