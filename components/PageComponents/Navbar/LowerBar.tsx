@@ -1,4 +1,5 @@
 import React from 'react'
+import Tag from '@/components/UI/Tag';
 import { AiOutlineUser, AiOutlineShoppingCart } from 'react-icons/ai'
 import { MdFavoriteBorder } from 'react-icons/md'
 import { FaSearch } from 'react-icons/fa';
@@ -42,13 +43,16 @@ const LowerBar = () => {
                         <p className='text-base'>Account</p>
                     </div>
                 </div>
-                <div className='relative place-items-end'>
+                <div className='relative cursor-pointer'>
                     {/* favorite icon */}
                     <MdFavoriteBorder size={30} />
-                    <div className='absolute right-0 top-[-3px] place-items-end'><p className='bg-red-500 rounded-full w-3 h-3 text-[11px] px-1 font-bold text-slate-100'>2</p></div>
+                    <Tag count={2} />
                 </div>
                 <div className='flex flex-row items-end gap-1'>
-                    <AiOutlineShoppingCart size={30} />
+                    <div className='relative cursor-pointer'>
+                        <AiOutlineShoppingCart size={30} />
+                        <Tag count={2} />
+                    </div>
                     <div className='flex flex-col'>
                         <p className='text-sm text-slate-600'> Total</p>
                         <p className='text-base'>$0.00</p>
