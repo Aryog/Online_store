@@ -4,7 +4,7 @@ import { MdFavoriteBorder } from 'react-icons/md'
 import { FaSearch } from 'react-icons/fa';
 const LowerBar = () => {
     return (
-        <div className='w-5/6 m-auto flex justify-between items-center'>
+        <div className='w-5/6 m-auto flex justify-between items-center mt-4'>
             {/* left */}
             <div className='flex justify-start'>
                 <p className='text-3xl'>Online Store</p>
@@ -33,8 +33,8 @@ const LowerBar = () => {
                 </div>
             </div>
             {/* right */}
-            <div className='flex flex-row gap-4 items-center'>
-                <div className='flex flex-row items-center'>
+            <div className='flex flex-row gap-4 items-end'>
+                <div className='flex flex-row items-end gap-1'>
                     <AiOutlineUser size={30} />
                     {/* account logo */}
                     <div className='flex flex-col'>
@@ -42,12 +42,12 @@ const LowerBar = () => {
                         <p className='text-base'>Account</p>
                     </div>
                 </div>
-                <div className='relative'>
+                <div className='relative place-items-end'>
                     {/* favorite icon */}
                     <MdFavoriteBorder size={30} />
-                    <div className='absolute right-0 top-[-3px]'><p className='bg-red-500 rounded-full w-3 h-3 text-[11px] px-1 font-bold text-slate-100'>2</p></div>
+                    <div className='absolute right-0 top-[-3px] place-items-end'><p className='bg-red-500 rounded-full w-3 h-3 text-[11px] px-1 font-bold text-slate-100'>2</p></div>
                 </div>
-                <div className='flex flex-row gap-1 items-center'>
+                <div className='flex flex-row items-end gap-1'>
                     <AiOutlineShoppingCart size={30} />
                     <div className='flex flex-col'>
                         <p className='text-sm text-slate-600'> Total</p>
