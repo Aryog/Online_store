@@ -28,7 +28,6 @@ const Products = () => {
                         ? products.map((product) => <ProductCard productData={product} key={product.id} />)
                         : (Array.from({ length: 12 }, (_, index) => <AnimatePulse />))
                 }
-                {/* <AnimatePulse /> */}
             </div>
         </div>
     )

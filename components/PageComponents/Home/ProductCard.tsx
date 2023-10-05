@@ -21,11 +21,11 @@ const ProductCard = ({ productData }: ProductCardProps) => {
                 {/* bottom side */}
                 <div className='p-2'>
                     {/* Product Name */}
-                    <div className='line-clamp-2 relative'>
+                    <div className='line-clamp-2 relative min-h-[3rem]'>
                         {productData.title}
                     </div>
                     {/* Product Price */}
-                    <p className='text-red-500'>${productData.price}</p>
+                    <p className='text-red-500 pt-2'>${productData.price}</p>
                     {/* Product Rating */}
                     <div className='flex flex-row pt-2'>
                         <Rate rate={productData.rating.rate} count={productData.rating.count} />
