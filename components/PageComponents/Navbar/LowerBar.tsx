@@ -11,7 +11,7 @@ const LowerBar = () => {
                 <p className='text-3xl'>Online Store</p>
             </div>
             {/* mid */}
-            <div className="flex items-center border rounded-sm p-2">
+            <div className="flex items-center border dark:border-none rounded-sm p-2">
                 {/* Search Input */}
                 <input
                     type="text"
@@ -21,7 +21,7 @@ const LowerBar = () => {
 
                 {/* Category Dropdown */}
                 <div className="relative">
-                    <select className="bg-white border border-gray-400 hover:border-gray-500 p-2 pr-4 rounded-l-lg shadow outline-none">
+                    <select className="bg-white dark:bg-slate-800 border border-gray-400 hover:border-gray-500 p-2 pr-4 rounded-l-lg shadow outline-none">
                         <option>All Categories</option>
                         <option>Category 1</option>
                         <option>Category 2</option>

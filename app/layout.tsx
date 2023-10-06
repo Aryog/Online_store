@@ -1,4 +1,5 @@
 import Navbar from "@/components/PageComponents/Navbar"
+import { ThemeProvider } from "@/components/UI/ThemeProvider"
 
 export const metadata = {
   title: 'Next.js',
@@ -13,10 +14,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <title>OnlineStore</title>
-
       <body>
-        <nav><Navbar /></nav>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <nav><Navbar /></nav>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
