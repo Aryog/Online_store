@@ -5,7 +5,7 @@ import { LuMoonStar, LuSunMedium } from 'react-icons/lu'
 import { HiOutlineComputerDesktop } from 'react-icons/hi2'
 export type allowedModeState = "dark" | "light" | "system";
 const Offer = () => {
-    const [mode, setMode] = useState<allowedModeState>('dark')
+    const [mode, setMode] = useState<allowedModeState>('light')
     const [isToggle, setIsToggle] = useState<boolean>(false)
     function toogleTheme() {
         setIsToggle(!isToggle);

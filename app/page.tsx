@@ -2,6 +2,7 @@
 import Products from '@/components/PageComponents/Home/Products';
 import React from 'react';
 import { Hydrate, QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import './globals.css'
 const Home = () => {
   const [queryClient] = React.useState(() => new QueryClient)
@@ -10,6 +11,7 @@ const Home = () => {
       <Hydrate>
         <Products />
       </Hydrate>
+      <ReactQueryDevtools />
     </QueryClientProvider>
   );
 };
