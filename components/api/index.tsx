@@ -1,5 +1,5 @@
 import axios from "axios";
-const fetchProducts = async () => {
+export const fetchProducts = async () => {
     try {
         const response = await axios.get('https://fakestoreapi.com/products')
         // setProducts(response.data);
