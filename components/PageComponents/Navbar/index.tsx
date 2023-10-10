@@ -2,11 +2,15 @@
 import React from 'react'
 import Offer from './Offer'
 import LowerBar from './LowerBar'
-const Navbar = () => {
+type navProps = {
+    activeCat: string;
+    setActiveCat: React.Dispatch<React.SetStateAction<string>>;
+}
+const Navbar = ({ activeCat, setActiveCat }: navProps) => {
     return (
         <div className=''>
             <Offer />
-            <LowerBar />
+            <LowerBar activeCat={activeCat} setActiveCat={setActiveCat} />
         </div>
     )
 }

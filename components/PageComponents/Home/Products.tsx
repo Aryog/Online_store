@@ -3,13 +3,17 @@ import React from 'react'
 import ProductCard from './ProductCard'
 import { ProductItems } from '@/components/@types/Products/Products'
 import AnimatePulse from '@/components/UI/AnimatePulse'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { fetchProducts } from '@/components/api'
-const Products = () => {
+type productProps = {
+    activeCat: string;
+}
+const Products = ({ activeCat }: productProps) => {
+    const queryClient = useQueryClient()
     const queryData = useQuery({
-        queryKey: ['products'],
-        queryFn: fetchProducts,
-        // refetchInterval: 1000
+        queryKey: ['products', activeCat],
+        queryFn: () => fetchProducts(activeCat),
+        staleTime: 100
     })
     const isData = () => {
         if (queryData.isLoading) return Array.from({ length: 12 }, (_, index) => <AnimatePulse />)

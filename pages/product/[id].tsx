@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<productDetailsProps> = async ({ para
         props: { product },
     };
 };
-// for dynamic paths add getStaticPaths
+// For dynamic paths add getStaticPaths
 export async function getStaticPaths() {
     try {
         const response = await axios.get('https://fakestoreapi.com/products')
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
 
 /**
  * METHOD-2
- * Using server side rendering
+ * Using server side rendering (Also working)
  *  */
 // export async function getServerSideProps(context: GetServerSidePropsContext) {
 //     const { query } = context;

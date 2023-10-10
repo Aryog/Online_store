@@ -15,7 +15,6 @@ export default function RootLayout({
       <title>OnlineStore</title>
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <nav><Navbar /></nav>
           {children}
         </ThemeProvider>
       </body>
