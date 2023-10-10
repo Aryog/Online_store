@@ -1,3 +1,9 @@
+# [**View Live Website**](https://online-store-seven-lemon.vercel.app/)  
+  
+![Screenshot from 2023-10-10 15-21-56](https://github.com/Aryog/Online_store/assets/87793885/35085e1b-705f-4f26-9b7c-7af16272ab35)
+
+
+
 # Assignment Title: E-commerce Development Task
 
 ## Assignment Description:
