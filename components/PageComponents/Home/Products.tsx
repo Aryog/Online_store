@@ -16,7 +16,7 @@ const Products = ({ activeCat }: productProps) => {
         staleTime: 100
     })
     const isData = () => {
-        if (queryData.isLoading) return Array.from({ length: 12 }, (_, index) => <AnimatePulse />)
+        if (queryData.isLoading) return Array.from({ length: 12 }, (_, index) => <AnimatePulse key={index} />)
         if (queryData.isError) return <pre>{JSON.stringify(queryData.error)}</pre>
         return queryData.data.map((product: ProductItems) => <ProductCard productData={product} key={product.id} />)
     }

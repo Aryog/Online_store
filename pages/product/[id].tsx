@@ -1,7 +1,5 @@
 import React from 'react'
-import { useRouter } from 'next/router'
-import { GetServerSideProps, GetServerSidePropsContext, GetStaticPaths, GetStaticProps } from 'next';
-import { Params } from 'next/dist/shared/lib/router/utils/route-matcher';
+import { GetStaticProps } from 'next';
 import axios from 'axios';
 import { ProductItems } from '@/components/@types/Products/Products';
 type productDetailsProps = {
@@ -9,7 +7,7 @@ type productDetailsProps = {
 }
 const ProductDetails = ({ product }: productDetailsProps) => {
     return (
-        <div>ProductDetails{product.title}</div>
+        <div>ProductDetails{product?.title}</div>
     )
 }
 

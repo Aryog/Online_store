@@ -45,7 +45,7 @@ const LowerBar = ({ activeCat, setActiveCat }: lowerBarProps) => {
                     <select className="bg-white dark:bg-slate-800 border border-gray-400 hover:border-gray-500 p-2 pr-4 rounded-l-lg shadow outline-none capitalize" onChange={handleSelectChange}>
                         <option value="allCat">All Categories</option>
                         {
-                            queryData.isSuccess && queryData.data.map((category: string) => <option className='capitalize' value={category}>{category}</option>)
+                            queryData.isSuccess && queryData.data.map((category: string) => <option className='capitalize' value={category} key={category}>{category}</option>)
                         }
                     </select>
                 </div>

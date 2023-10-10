@@ -18,7 +18,7 @@ const ProductCard = ({ productData }: ProductCardProps) => {
                 <div className='drop-shadow-md hover:drop-shadow-lg gap-2 flex flex-col w-60 cursor-pointer bg-slate-50 mt-10 dark:bg-slate-800' onClick={() => handleProduct(productData.id)}>
                     {/* Image */}
                     <div className='h-60 w-60 transition-transform transform hover:scale-110 hover:p-0'>
-                        <img src={productData.image} className='h-full w-full object-contain' />
+                        <img alt='broken' src={productData.image} className='h-full w-full object-contain' />
                     </div>
                     {/* bottom side */}
                     <div className='p-2'>
